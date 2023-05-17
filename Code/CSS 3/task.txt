@@ -1,0 +1,11 @@
+Implement the following components (Online-shope homepage):
+1. Header Prev task
+2. Complete Header and Layout
+    a. Complete missing code in Prev task 2days
+    b. Hero Section 2days
+    c. Features 1day
+    b. Categories 2days (Bonus)
+
+
+Ramy's task
+Featured Products Video recording

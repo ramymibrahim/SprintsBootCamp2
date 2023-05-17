@@ -1,0 +1,17 @@
+grid
+grid-template-columns
+grid-template-rows
+in items:
+  grid-column-start: 1;
+  grid-column-end: 3;
+units
+variables
+media
+box-shadow: 10px 10px 8px 10px #888888;
+
+https://www.w3schools.com/css/css3_3dtransforms.asp
+https://www.w3schools.com/css/css3_transitions.asp
+https://www.w3schools.com/css/css3_animations.asp
+Bootstrap
+SASS , LESS (CSS Preprocessors)
+RTL
