@@ -1,9 +1,4 @@
-.grid-container > div {
-  height: 100px;
-  background-color: rgb(247, 102, 102);
-  border: 1px solid black;
-  box-shadow: 10px 10px 8px 10px #888888;
-}
+
 
 .float-container > div > div:hover {
   background-color: rgb(51, 70, 236);
@@ -34,6 +29,14 @@
   display: block;
   clear: both;
 }
+
+.grid-container > div {
+  height: 100px;
+  background-color: rgb(247, 102, 102);
+  border: 1px solid black;
+  box-shadow: 10px 10px 8px 10px #888888;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
