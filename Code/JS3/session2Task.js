@@ -15,7 +15,6 @@ const addTask = function () {
   addTaskToList(task);
   renderTaskTable();
 };
-
 const validate = function (task) {
   if (!task.name.trim()) return false;
   if (isNaN(Number(task.priority)) || Number(task.priority) < 1) return false;
@@ -48,4 +47,17 @@ const deleteTask = function (i) {
   }
   tasks.splice(i, 1);
   renderTaskTable();
+};
+
+const getHighestPriority = () => {
+  if (tasks.length == 0) return null;
+  let min = tasks[0].priority;
+  let minI = 0;
+  for (let i = 1; i < tasks.length; i++) {
+    if (min > tasks[i].priority) {
+      min = tasks[i].priority;
+      minI = i;
+    }
+  }
+  return tasks[minI];
 };

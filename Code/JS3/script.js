@@ -1,39 +1,103 @@
+"use strict";
 // Task review
+
 // Function Types
-// HOF,callback and return Function
+//Declared function (Hoisting,can be replaced)
+function funcName() {}
+
+const funcName2 = function () {
+  return false;
+};
+
+//Arrow function
+const funcName3 = () => {
+  return false;
+};
+
+const funcName4 = () => false;
+
 // Functions in Objects
+// var age = 12;
+// var gender = "female";
+// var name = "Sara";
+
+const dd = function (a, b) {
+  console.log(
+    `Name: ${this.name}, age:${this.age}, gender:${this.gender}, t:${a + b}`
+  );
+};
+
+const student1 = {
+  name: "Michel",
+  age: 28,
+  address: { apt: 20, city: "Zamalek" },
+  isAdmin: true,
+  gender: "male",
+  //displayData: dd,
+};
+const student2 = {
+  name: "Ramy",
+  age: 35,
+  address: {
+    apt: 1,
+    city: "October city",
+  },
+  //displayData: dd,
+};
+
+//This => caller of the function
+// arrow function does not have this
+
 // This, Call, bind, apply
 
+// Scope Chaining
+let var1 = 1;
+function scopeTest() {
+  let var2 = 2;
+  let var1 = 5;
+  if (true) {
+    let var3 = 3;
+    console.log(var1);
+    console.log(var2);
+    console.log(var3);
+  }
+}
+
+// HOF,callback and return Function
+
 // Numbers
-    //0.1 Problem
-    //Number Functions
-    //Number Constants (MAX_SAFE_INTEGER) 2^53
-    //BigInt 1n
+//0.1 Problem
+//Number Functions
+//Number Constants (MAX_SAFE_INTEGER) 2^53
+//BigInt 1n
+
 // Dates
-    //Unix time
-    //YYYY-MM-DDTHH:mm:ss.sssZ
-    //const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
-    //console.log(new Intl.DateTimeFormat('en-US').format(date));
-    //SetTimeOut
-    //SetInterval
-// String functions
-    //replace,trim,startsWith,endsWith,split,join,indexOf (-2),lastIndexOf
 
-// Find the highest priority task
+// 01/02/2023
+// yyyy-mm-dd
+//Unix time
+//YYYY-MM-DDTHH:mm:ss.sssZ
+let date1 = new Date();
+let date2 = new Date("2023-05-21");
+let date3 = new Date(105214523);
+let date4 = Date.UTC(2023, 5, 21);
 
-// Destructing Arrays and Objects
-// Rest (signature) and Spread Operators (pass)
-// Arrays again (new Array)
-// indexOf, includes, sort
-// Array functions (filter, find, map, reduce, forEach,every , some,flatMap)
-// Maps and Sets
-// OOP
-// APIs
-// Async Await
-// Micro and Macro task queues
-// Call stack
+//const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+//console.log(new Intl.DateTimeFormat('en-US').format(date));
 
-// DOM and BOM
-    // Query Selector, byId, Tag, ClassName
-//IIFE
-//Modules
+const timeOut1 = setTimeout(() => {
+  alert("Hello");
+}, 1500);
+
+clearTimeout(timeOut1);
+
+const interval1 = setInterval(() => {
+  console.log(new Date());
+}, 1000);
+
+//clearInterval(interval1);
+
+//SetTimeOut
+//SetInterval
+
+//Find the highest priority task
