@@ -14,12 +14,13 @@
   </head>
   <body>
     <div>
-      <input id="taskName" />
+      <input id="taskName" onkeyup="filterTasks()" />
       <input type="number" id="priority" />
       <button onclick="addTask()">Add</button>
-      <button onclick="findMostImportantTask()">
-        Find Most Important Task
-      </button>
+      <button onclick="saveAll()">Save All</button>
+      <input type="text" id="tasks" value="IMP:Task1, Task2(3), Task3(4)" />
+      <button onclick="addTasks()">Add Tasks by line</button>
+
       <table class="table">
         <thead>
           <tr>

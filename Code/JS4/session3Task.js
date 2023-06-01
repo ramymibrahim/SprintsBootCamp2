@@ -13,7 +13,7 @@ const addTask = function () {
   }
 
   addTaskToList(task);
-  renderTaskTable();
+  renderTaskTable(tasks);
 };
 const validate = function (task) {
   if (!task.name.trim()) return false;
@@ -22,10 +22,18 @@ const validate = function (task) {
 };
 
 const addTaskToList = function (task) {
-  tasks.push(task);
+  let itemAdded = false;
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].priority > task.priority) {
+      tasks.splice(i, 0, task);
+      itemAdded = true;
+      break;
+    }
+  }
+  if (!itemAdded) tasks.push(task);
 };
 
-const renderTaskTable = function () {
+const renderTaskTable = function (tasks) {
   let tbody = "";
   for (let i = 0; i < tasks.length; i++) {
     tbody += getTableRow(i, tasks[i]);
@@ -43,7 +51,7 @@ const deleteTask = function (i) {
     return;
   }
   tasks.splice(i, 1);
-  renderTaskTable();
+  renderTaskTable(tasks);
 };
 
 // const func1 = () => {
@@ -86,6 +94,12 @@ const save = (i) => {
   tasks[i].priority = document.getElementById(`priority_${i}`).value;
   tasks[i].editMode = false;
   renderTaskRow(i);
+};
+
+const saveAll = () => {
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].editMode) save(i);
+  }
 };
 
 const editTask = (i) => {
