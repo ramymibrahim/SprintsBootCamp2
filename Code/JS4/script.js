@@ -80,6 +80,7 @@ const getTaskNames = () => {
 };
 
 tasks.forEach((x) => (x.task_date = new Date()));
+
 /*
 Filter tasks by name
 
