@@ -238,13 +238,4 @@ const getRequest = async () => {
 };
 
 getRequest();
-/*  
-  // Micro and Macro task queues & Call stack
-  // localstorage
-  // Immediately Invoked Function Expression
-  // IIFE
-  // Modules
-  // JQuery Intro
-  Final Project
-  Q&A
-  */
+
