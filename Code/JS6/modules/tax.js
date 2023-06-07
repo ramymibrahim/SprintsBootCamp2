@@ -10,4 +10,4 @@ const calculateGrossSalary = function (salary) {
   return tax + salary + 100;
 };
 
-export { calculateGrossSalary, calculateTax ,salaryCalculated};
+export default { salaryCalculated, calculateTax, calculateGrossSalary };

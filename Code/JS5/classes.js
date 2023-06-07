@@ -61,6 +61,11 @@ class Pawn extends Piece {
   constructor(board, x, y, team) {
     super(board, x, y, "pawn", team);
   }
+  canMove() {
+    if (!super.canMove()) return false;
+    //Pawn logic
+    return true;
+  }
 }
 
 let board = new Board();
